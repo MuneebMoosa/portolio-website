@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+:root {
+    --main-color: #dead5f;
+    --primary-color: #312e2e;
+}
+
+ /* Utility styles */
+button {
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #44210d; 
+    transform: scale(1.1); 
+    color: var(--main-color);
+}
+ /* Resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: var(--primary-color);
+    font-family:  sans-serif; 
+}
+ /* Navigation start */
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    color: #fff;
+    padding: 15px 20px; 
+    margin-bottom: 0;
+}
+
+ul {
+    display: flex; 
+    gap: 20px; 
+}
+
+li {
+    display: inline;
+    list-style: none;
+    
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    border-bottom: none;
+    transition: border-bottom 0.3s ease-in; 
+}
+
+li a:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+/* navigation ends */
+
+/* header start */
+.header{
+    margin-top: 0;
+    padding-top: 10px;
+    text-transform: uppercase;
+    height:100vh;
+    /* background-image:url(CUsersMuneebDesktopcofeelandimagescofeecofee.png.jpeg.png); */
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'kanit' , sans-serif;
+    font-weight:normal;
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:relative;
+    gap: 10px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom:0 ;
+}
+img {
+    transform: scale(0.8); 
+    transform-origin: center; 
+    position: relative;
+    bottom: 30px;
+}
+.main-head{
+    position: absolute;
+    top: 4rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+}
+.primery-head{
+    position: absolute;
+    bottom: 8rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -10px;
+}
+.main-btn{
+    position: absolute;
+    bottom: 5rem;
+    padding: 10px 30px;
+}
+/* our story start */
+#our-story{
+    height: 100vh;
+    margin-top:3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    width: 400px;
+    height: 400px;
+    background-image:url(images/Cup_Of_Coffee_Top_View__Cup__Coffee__Mug_PNG_Transparent_Image_and_Clipart_for_Free_Download-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    transform:translateY(40px);
+}
+.title-style{
+    display: flex;
+    align-items:center;  
+}
+.title{
+    font-family: 'kanit' ,sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    transform: translateY(10px);
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    transform: translate(-20px, 10px);
+}
+.section-content P{
+  max-width: 500px;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: 20PX;
+  margin: 20px;
+}
+.section-content button{
+    position: relative;
+    right: -1.3rem;
+}
+/* our story ends */
+
+/* cofee start */
+.cofee-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10 rem;
+}
+.content-section p{
+    max-width: 500px;
+    font-family: sans-serif;
+    color:white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.img-2{
+    width: 400px;
+    height:400px;
+}
+.title-two{
+    font-size: 3rem;
+    color: #fff;
+    font-family:'kanit' ,sans-serif;
+    line-height: 3rem;
+    text-decoration: underline var(--main-color) 3px;
+    letter-spacing: 2px;
+}
+/* cofee start END */
+
+/* products start */
+.product{
+    margin-top:5rem;
+}
+.title-Three{
+    font-size: 4rem;
+    font-family: 'kanit' , sans-serif;
+    margin-left: 6.5rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+    color: #fff;
+    text-decoration: underline 2px var(--main-color);
+    text-underline-offset: 6px;
+
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.card{
+    border: 2px solid var(--main-color);
+    padding: 0;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center ;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.card-img-one{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -110px;
+    background-image: url(images/Premium_AI_Image___Cup_of_coffee_on_a_white_background_top_view_Black_Coffee_Coffee_Drink_espresso-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-img-two{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -110px;
+    background-image: url(images/PNG_bakery-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-img-three{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -110px;
+    background-image: url(images/Cinnamon_Coffee_Powder_125g____eBay-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+}
+.card-title{
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 50px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.items-container p{
+    color: #fff;
+    font-family:sans-serif;
+    margin: 20px 0;
+    text-align: center;
+}
+/* product end */
+
+/* footer START */
+footer{
+    height:50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+.container{
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+.Email{
+    color: #ee3f3f;
+}
+.heading-info{
+   margin-bottom: 20px; 
+   position: relative; 
+   text-align: center;
+}
+footer p{
+    line-height: 25px ;
+}
+span{
+    color: var(--main-color);
+}
+
+.para{
+   color: #fff;
+   font-family: sans-serif;
+   text-align: center; 
+   margin-top: 20px;
+}
+.hr-two {
+    border: none; 
+    border-top: 2px solid #e7dada;  
+    margin: 20px 0; 
+    width: 80%; 
+    margin: 20px auto; 
+}
+  /* footer END */
+
+  /* PROJECT END */
+  /*RESPONSIVENESS*/
+  @media  (max-width: 768px){
+    .main-head,.primery-head{
+        font-size:3rem;
+    }
+    #our-story{
+        text-align: center;
+    }
+    #our-story button{
+        position: relative;
+        right: 2px;
+        
+    }
+    .title{
+        /* transform: translate(50px); */
+        margin: 0 auto;
+    }
+    .line{
+        display: none;
+    }
+    .cofee-container{
+        margin-top: 5rem;
+    }
+    .content-section{
+        text-align: center;
+    }
+    .title-two{
+        margin: 0 auto;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    .product{
+        margin-top: 3rem;
+
+    }
+    .title-Three{
+        margin-bottom: 70px;
+    }
+    footer{
+        margin-top: 10px;
+    }
+    .para{
+       margin-top: 3rem;
+       font-size: smaller;
+    }
+  }
