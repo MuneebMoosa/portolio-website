@@ -72,6 +72,13 @@ nav{
   z-index: 1000; 
   background:var(--primary-color)
 }
+.logo {
+  width: 250px;
+  height: auto;
+}
+.logo path{
+ fill: var(--main-color);
+}
 nav ul{
  display: flex;
  gap: 20px;
@@ -83,7 +90,7 @@ nav ul li{
 }
 nav ul li a{
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 60px;
   color: var(--main-color);
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 2px solid transparent;
@@ -91,11 +98,6 @@ nav ul li a{
 }
 li a:hover{
   border-bottom: 2px solid var(--main-color);
-}
-
-.logo{
-  font-size: 25px;
-  color: var(--main-color);
 }
 
 /* nav ends */
@@ -358,6 +360,40 @@ header{
  font-size: 18px;
  color: var(--four-color);
  margin-bottom: 10px;
+}
+/* Animation for SVGs */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-con svg,
+.main-con .exp-part {
+  opacity: 0;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.main-con.animate svg {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.main-con.animate .exp-part {
+  animation: fadeInLeft 1s ease-in-out forwards;
 }
 /* experience section ends */
 
