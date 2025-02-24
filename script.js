@@ -22,8 +22,37 @@ themeSwitch.addEventListener("click" , () => {
   }
 });
 // dark mode ends
-
 // animation start
+// Function to animate elements when they come into view
+function animateOnScroll() {
+  const mainContainers = document.querySelectorAll("#sec2 .main-con");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate"); // Add animation class
+          observer.unobserve(entry.target); // Stop observing after animation
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    }
+  );
+
+  // Observe each main container
+  mainContainers.forEach((container) => {
+    observer.observe(container);
+  });
+}
+
+// Call the function to start observing
+animateOnScroll();
+
+// Re-check on scroll to handle dynamic positioning
+window.addEventListener("scroll", animateOnScroll);
+
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".main-section");
 
@@ -90,6 +119,7 @@ document.addEventListener("DOMContentLoaded", animateProgressBars);
 document.querySelector(".contacts").onsubmit = function() {
   setTimeout(() => this.reset(), 100);
 };
+// animation ends
 
 // footer
 document.getElementById("year").textContent = new Date().getFullYear();
