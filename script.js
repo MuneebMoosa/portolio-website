@@ -1,27 +1,47 @@
 // dark mode start
 let darkmode = localStorage.getItem('darkmode');
-const themeSwitch = document.getElementById('theme-switch');
+const themeSwitches = document.querySelectorAll('.theme-switch'); // Use querySelectorAll for multiple elements
 
-function enableDarkmode(){
+function enableDarkmode() {
   document.body.classList.add('darkmode');
-  localStorage.setItem('darkmode' , 'active')
+  localStorage.setItem('darkmode', 'active');
 }
-function disableDarkmode(){
+
+function disableDarkmode() {
   document.body.classList.remove('darkmode');
-  localStorage.setItem('darkmode' , 'null')
+  localStorage.setItem('darkmode', 'inactive');
 }
-if(darkmode === 'active'){
+
+// Apply dark mode if it's active on page load
+if (darkmode === 'active') {
   enableDarkmode();
 }
-themeSwitch.addEventListener("click" , () => {
-  darkmode = localStorage.getItem('darkmode');
-  if(darkmode !== "active"){
-    enableDarkmode();
-  }else{
-    disableDarkmode();
-  }
+
+// Add event listeners to all theme switches
+themeSwitches.forEach((themeSwitch) => {
+  themeSwitch.addEventListener('click', () => {
+    darkmode = localStorage.getItem('darkmode');
+    if (darkmode !== 'active') {
+      enableDarkmode();
+    } else {
+      disableDarkmode();
+    }
+  });
 });
 // dark mode ends
+
+// sidebar start
+function showSlidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+}
+function closeSlidebar(event){
+  event.preventDefault();
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+}
+
+// sidebar ends
 // animation start
 // Function to animate elements when they come into view
 function animateOnScroll() {
@@ -67,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
   handleScroll(); 
 });
+
 // progress bar
 // Function to check if an element is near the center of the viewport
 function isElementCentered(el) {
