@@ -31,14 +31,32 @@ themeSwitches.forEach((themeSwitch) => {
 // dark mode ends
 
 // sidebar start
-function showSlidebar(){
+function showSlidebar(event) {
+  event.preventDefault();
   const sidebar = document.querySelector('.sidebar');
   sidebar.style.display = 'flex';
+
+  // Add event listener to close sidebar when clicking outside
+  document.addEventListener('click', closeOnClickOutside);
 }
-function closeSlidebar(event){
+
+function closeSlidebar(event) {
   event.preventDefault();
   const sidebar = document.querySelector('.sidebar');
   sidebar.style.display = 'none';
+
+  // Remove the event listener when the sidebar is closed
+  document.removeEventListener('click', closeOnClickOutside);
+}
+
+function closeOnClickOutside(event) {
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarToggle = document.querySelector('.menu-btn'); // Reference the toggle button
+
+  // Check if the click is outside the sidebar and not on the toggle button
+  if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+    closeSlidebar(event);
+  }
 }
 
 // sidebar ends
