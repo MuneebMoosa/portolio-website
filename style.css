@@ -162,7 +162,7 @@ li:not(:last-child) a:hover {
   top: -20px;
 }
 /* responsiveness */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
   nav {
     width: 100%;
     display: flex;
@@ -260,7 +260,7 @@ header{
   border-color: var(--primary-color);
 }
 /* header ends  */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
   .header{
     width: 100%;
   }
