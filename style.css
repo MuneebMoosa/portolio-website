@@ -164,6 +164,7 @@ li:not(:last-child) a:hover {
 /* responsiveness */
 @media screen and (max-width: 390px) {
   nav {
+    width: 100%;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -174,6 +175,10 @@ li:not(:last-child) a:hover {
   }
   nav .menu-btn {
     margin-right: auto ; 
+  }
+  .sidebar{
+  right: 280px;
+  width: 200px;
   }
 }
 
@@ -257,7 +262,7 @@ header{
 /* header ends  */
 @media screen and (max-width: 390px) {
   .header{
-    width: auto;
+    width: 100%;
   }
   .main-part h1{
       font-size: 3.5rem !important;
