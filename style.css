@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  max-width: 100%;
 }
 :root{
   --main-color:  #f07e21;
@@ -123,36 +124,41 @@ li:not(:last-child) a:hover {
 .menu-btn{
   display: none;
 }
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   width: 250px;
-  z-index: 999 ;
+  z-index: 999;
   backdrop-filter: blur(10px);
   background-color: #ffffff83;
-  box-shadow:  -10px 0 10px rgba(0, 0, 0, 0.479);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.479);
   display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
 }
-.sidebar li{
-   width: 100%;
-   margin-top: 30px;
+
+.sidebar li {
+  width: 100%;
+  margin-top: 30px;
 }
-.sidebar a{
+
+.sidebar a {
   width: 100%;
 }
-.sidebar li a:first-child{
- border-bottom: none;
+
+.sidebar li a:first-child {
+  border-bottom: none;
 }
-.sidebar .close-btn svg{
+
+.sidebar .close-btn svg {
   fill: var(--main-color);
-  transform: translate3d(-40px , 0x, 0 );
+  transform: translate3d(-40px, 0, 0);
 }
+
 .sidebar .theme-switch {
   backdrop-filter: blur(10px);
   background-color: #ffffff83;
@@ -161,24 +167,22 @@ li:not(:last-child) a:hover {
   left: 30px;
   top: -20px;
 }
-/* responsiveness */
+
+/* Responsiveness */
 @media screen and (max-width: 450px) {
   nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    width: 100vw; 
   }
   nav .logo {
-    width: 80px; 
-    margin-left: 0; 
+    width: 80px;
+    margin-left: 0;
   }
   nav .menu-btn {
-    margin-right: auto ; 
+    margin-right: auto;
   }
-  .sidebar{
-  right: 280px;
-  width: 200px;
+  .sidebar {
+    right: 0; 
+    width: 200px;
   }
 }
 
@@ -262,18 +266,28 @@ header{
 /* header ends  */
 @media screen and (max-width: 450px) {
   .header{
-    width: 100%;
+    width: 100vh;
+    height: 550px;
+  }
+  .main-part{
+    height: 300px;
+
   }
   .main-part h1{
-      font-size: 3.5rem !important;
+      font-size: 2.5rem !important;
+      margin-bottom: 20px;
   }
-  .main-part h3 {
+  .main-part h3{
     font-size: 1rem;
   }
-  .icon-part{
-    margin-top: 10px;
+  .main-part h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
-}
+  .icon-part ul{
+   margin-bottom: 50px;
+  }
+  }
 /* about section start */
 .main-section{
   height: 700px;
@@ -370,6 +384,16 @@ header{
   background: var(--four-color);
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 450px) {
+.main-section .address-part,
+.main-section .description-part {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
 }
 /* about section ends */
 
@@ -649,6 +673,7 @@ header{
 }
 .project-sec h1{
   font-family:Monaco, Consolas, “Lucida Console”, monospace;
+  font-weight: 100;
   color: var(--primary-color);
   font-size: 40px;
   margin-bottom: 30px;
@@ -882,7 +907,8 @@ footer {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap:  20px 0px;
+  gap:  20px 20px;
+  padding: 0px;
   align-items: end;
   justify-items: center;
 }  
@@ -933,7 +959,7 @@ form button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 750px;
+      height: auto;
     }
     .main-section .sect-content {
       flex-direction: column;
@@ -949,11 +975,13 @@ form button {
       margin: 0 auto;
     }
     /* experience start */
+    .resume-sec .resmain-head{
+      font-size: 40px !important;
+    }
     .main-con {
       margin-left: 20px;
       margin-right: 20px; 
     }
-  
     .main-con svg {
       left: -23px; 
       top: 60px;
@@ -983,30 +1011,34 @@ form button {
     .left {
       transform: translateX(0);
     }
+    /* projects */
+    .project-sec h1{
+      font-size: 40px !important;
+    }
     /* contact */
     .contact-sec {
-      padding: 30px; /* Reduce padding */
+      padding: 30px; 
     }
   
     .contact {
-      gap: 15px; /* Reduce gap */
+      gap: 15px; 
     }
   
     .cont-text-pri {
-      font-size: 35px; /* Reduce heading size */
+      font-size: 35px; 
     }
   
     .cont-text-ter {
-      font-size: 22px; /* Reduce subheading size */
+      font-size: 22px; 
     }
   
     form {
-      width: 100%; /* Full width */
-      padding: 0 10px; /* Add some padding */
+      width: 100%; 
+      padding: 0 10px; 
     }
   
     form button {
-      width: 80%; /* Full width button */
+      width: 80%; 
     }
 }
     
