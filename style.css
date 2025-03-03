@@ -161,7 +161,21 @@ li:not(:last-child) a:hover {
   left: 30px;
   top: -20px;
 }
-
+/* responsiveness */
+@media screen and (max-width: 390px) {
+  nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  nav .logo {
+    width: 80px; 
+    margin-left: 0; 
+  }
+  nav .menu-btn {
+    margin-right: auto ; 
+  }
+}
 
 
 /* nav ends */
@@ -241,7 +255,20 @@ header{
   border-color: var(--primary-color);
 }
 /* header ends  */
-
+@media screen and (max-width: 390px) {
+  .header{
+    width: auto;
+  }
+  .main-part h1{
+      font-size: 3.5rem !important;
+  }
+  .main-part h3 {
+    font-size: 1rem;
+  }
+  .icon-part{
+    margin-top: 10px;
+  }
+}
 /* about section start */
 .main-section{
   height: 700px;
@@ -978,17 +1005,3 @@ form button {
     }
 }
     
-/* @media screen and (max-width: 425px) {
-    .main-part h1{
-      font-size: 3rem;
-  }
-  .main-part h3 {
-    font-size: 1rem;
-  }
-  .icon-part{
-    margin-top: 10px;
-  }
-  .main-section{
-    height: 800px;
-  }
-} */
