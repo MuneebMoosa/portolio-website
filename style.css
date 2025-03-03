@@ -344,15 +344,6 @@ header{
   border-color: var(--primary-color);
 }
 
-/* Responsiveness */
-@media screen and (max-width: 450px) {
-.main-section .address-part,
-.main-section .description-part {
-  max-width: 100%;
-  width: 100vw;
-  margin: 0 auto;
-}
-}
 /* about section ends */
 
 /* experience section start */
@@ -830,7 +821,7 @@ footer {
 }
 
 .work-exp {
-  max-width: 600px; /* Bigger containers */
+  max-width: 600px; 
   width: 100%;
  
   margin-left: 60px;
@@ -872,18 +863,18 @@ footer {
 }  
 /* contact */
 form {
-  width: 100%; /* Adjust width to fit the screen */
-  grid-template-columns: 1fr; /* Stack inputs in a single column */
+  width: 100%;
+  grid-template-columns: 1fr; 
 }
 
 form textarea {
-  grid-column: span 1; /* Match single-column layout */
-  width: 100%; /* Adjust width */
+  grid-column: span 1; 
+  width: 100%;
 }
 
 form button {
-  grid-column: span 1; /* Center button */
-  width: 50%; /* Adjust button size */
+  grid-column: span 1; 
+  width: 50%; 
 }
 
 }
@@ -1045,4 +1036,11 @@ form button {
   .icon-part ul{
    margin-bottom: 50px;
   }
+  /* about */
+.main-section .address-part,
+.main-section .description-part {
+  max-width: 100%;
+  width: 100vw;
+  margin: 0 auto;
+}
 }   
