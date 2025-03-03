@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   max-width: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 :root{
   --main-color:  #f07e21;
@@ -184,6 +185,9 @@ li:not(:last-child) a:hover {
     right: 0; 
     width: 200px;
   }
+  .sidebar .close-btn svg {
+    transform: translate3d(-10px, 0, 0);
+  }
 }
 
 
@@ -271,17 +275,17 @@ header{
   }
   .main-part{
     height: 300px;
-
   }
   .main-part h1{
-      font-size: 2.5rem !important;
-      margin-bottom: 20px;
+      font-size: 3rem !important;
   }
   .main-part h3{
     font-size: 1rem;
+    margin-top: 20px;
   }
   .main-part h2{
     font-size: 2rem;
+    margin-bottom: 20px;
     margin-bottom: 20px;
   }
   .icon-part ul{
@@ -391,7 +395,7 @@ header{
 .main-section .address-part,
 .main-section .description-part {
   max-width: 100%;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
 }
 }
@@ -908,7 +912,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap:  20px 20px;
-  padding: 0px;
+  padding: 20px 0PX;
   align-items: end;
   justify-items: center;
 }  
@@ -1013,6 +1017,7 @@ form button {
     }
     /* projects */
     .project-sec h1{
+      margin-top: 80px !important;
       font-size: 40px !important;
     }
     /* contact */
