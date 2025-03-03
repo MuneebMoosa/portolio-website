@@ -727,49 +727,6 @@ button:hover{
 }
 /* contact section end */
 /* responce contact */
-@media (max-width: 1034px) {
-  form {
-    width: 100%; /* Adjust width to fit the screen */
-    grid-template-columns: 1fr; /* Stack inputs in a single column */
-  }
-
-  form textarea {
-    grid-column: span 1; /* Match single-column layout */
-    width: 100%; /* Adjust width */
-  }
-
-  form button {
-    grid-column: span 1; /* Center button */
-    width: 50%; /* Adjust button size */
-  }
-}
-
-@media (max-width: 840px) {
-  .contact-sec {
-    padding: 30px; /* Reduce padding */
-  }
-
-  .contact {
-    gap: 15px; /* Reduce gap */
-  }
-
-  .cont-text-pri {
-    font-size: 35px; /* Reduce heading size */
-  }
-
-  .cont-text-ter {
-    font-size: 22px; /* Reduce subheading size */
-  }
-
-  form {
-    width: 100%; /* Full width */
-    padding: 0 10px; /* Add some padding */
-  }
-
-  form button {
-    width: 80%; /* Full width button */
-  }
-}
 
 /* footer start */
 footer {
@@ -897,6 +854,21 @@ footer {
   align-items: end;
   justify-items: center;
 }  
+/* contact */
+form {
+  width: 100%; /* Adjust width to fit the screen */
+  grid-template-columns: 1fr; /* Stack inputs in a single column */
+}
+
+form textarea {
+  grid-column: span 1; /* Match single-column layout */
+  width: 100%; /* Adjust width */
+}
+
+form button {
+  grid-column: span 1; /* Center button */
+  width: 50%; /* Adjust button size */
+}
 
 }
 @media screen and (max-width: 840px){
@@ -978,6 +950,31 @@ footer {
     .right,
     .left {
       transform: translateX(0);
+    }
+    /* contact */
+    .contact-sec {
+      padding: 30px; /* Reduce padding */
+    }
+  
+    .contact {
+      gap: 15px; /* Reduce gap */
+    }
+  
+    .cont-text-pri {
+      font-size: 35px; /* Reduce heading size */
+    }
+  
+    .cont-text-ter {
+      font-size: 22px; /* Reduce subheading size */
+    }
+  
+    form {
+      width: 100%; /* Full width */
+      padding: 0 10px; /* Add some padding */
+    }
+  
+    form button {
+      width: 80%; /* Full width button */
     }
 }
     
