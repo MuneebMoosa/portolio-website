@@ -168,29 +168,6 @@ li:not(:last-child) a:hover {
   left: 30px;
   top: -20px;
 }
-
-/* Responsiveness */
-@media screen and (max-width: 450px) {
-  nav {
-    width: 100vw; 
-  }
-  nav .logo {
-    width: 80px;
-    margin-left: 0;
-  }
-  nav .menu-btn {
-    margin-right: auto;
-  }
-  .sidebar {
-    right: 0; 
-    width: 200px;
-  }
-  .sidebar .close-btn svg {
-    transform: translate3d(-10px, 0, 0);
-  }
-}
-
-
 /* nav ends */
 
 /* header start */
@@ -268,30 +245,7 @@ header{
   border-color: var(--primary-color);
 }
 /* header ends  */
-@media screen and (max-width: 450px) {
-  .header{
-    width: 100vh;
-    height: 550px;
-  }
-  .main-part{
-    height: 300px;
-  }
-  .main-part h1{
-      font-size: 3rem !important;
-  }
-  .main-part h3{
-    font-size: 1rem;
-    margin-top: 20px;
-  }
-  .main-part h2{
-    font-size: 2rem;
-    margin-bottom: 20px;
-    margin-bottom: 20px;
-  }
-  .icon-part ul{
-   margin-bottom: 50px;
-  }
-  }
+
 /* about section start */
 .main-section{
   height: 700px;
@@ -958,6 +912,9 @@ form button {
     .icon-part ul li{
       margin-left: 30px;
     }
+    .sidebar .close-btn svg {
+      transform: translate3d(-10px, 0, 0);
+    }
     /* about section */
     .main-section {
       display: flex;
@@ -975,7 +932,7 @@ form button {
     .main-section .address-part,
     .main-section .description-part {
       max-width: 100%;
-      width: 100%;
+      width: 100vh;
       margin: 0 auto;
     }
     /* experience start */
@@ -1046,4 +1003,46 @@ form button {
       width: 80%; 
     }
 }
-    
+@media screen and (max-width: 450px) {
+  /* nav */
+  nav {
+    width: 100vw; 
+  }
+  nav .logo {
+    width: 80px;
+    margin-left: 0;
+  }
+  nav .menu-btn {
+    margin-right: auto;
+  }
+  .sidebar {
+    right: 0; 
+    width: 200px;
+  }
+  .sidebar .close-btn svg {
+    transform: translate3d(-10px, 0, 0);
+  }
+  /* header  */
+  .header{
+    width: 100vh;
+    height: 550px;
+  }
+  .main-part{
+    height: 300px;
+  }
+  .main-part h1{
+      font-size: 3rem !important;
+  }
+  .main-part h3{
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  .main-part h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .icon-part ul{
+   margin-bottom: 50px;
+  }
+}   
