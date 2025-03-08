@@ -448,9 +448,7 @@ header{
   margin-bottom: 10px;
 }
 .exp-part p{
-  font-family: Cambria, Georgia, serif;
-  font-weight: 300;
-
+  font-family:   “Century Gothic”, CenturyGothic, AppleGothic, sans-serif; 
 }
 
 /* Animation for SVGs */
@@ -1066,6 +1064,6 @@ font-size: 17px;
   font-size: 18px;
 }
 .work-exp .exp-part p{
-  font-size: 17px;
+  font-size: 15px;
 }
 }   
