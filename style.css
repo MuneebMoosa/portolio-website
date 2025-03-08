@@ -447,6 +447,9 @@ header{
   color: var(--four-color);
   margin-bottom: 10px;
 }
+.exp-part p{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 /* Animation for SVGs */
 @keyframes fadeInUp {
@@ -776,7 +779,9 @@ footer {
 }
 }
 
-
+@media screen and (min-width: 1035px){
+  /* nothing */
+}
 @media screen and (max-width: 1034px){
   /* header part */
   header{
