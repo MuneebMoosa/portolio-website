@@ -5,6 +5,9 @@
   max-width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
+.section{
+  min-height: 100vh;
+}
 :root{
   --main-color:  #f07e21;
   --primary-color: #fff;
@@ -285,7 +288,9 @@ header{
   align-items: center;
   margin-bottom: 20px;
   font-size: 20px;
-  font-family: Candara, Calibri, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 .main-section .address-part p strong{
   width:120px
@@ -298,7 +303,6 @@ header{
   max-width: 60%;
   margin-left: 40px;
   margin-bottom: 125px;
-  
 }
 .description-part .des-head{
   font-family:Monaco, Consolas, “Lucida Console”, monospace;
@@ -308,7 +312,9 @@ header{
 }
 .description-part p{
   font-size: 20px;
-  font-family: Candara, Calibri, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
   color: var(--four-color);
 }
 .description-part .one{
@@ -448,7 +454,11 @@ header{
   margin-bottom: 10px;
 }
 .exp-part p{
-  font-family:   “Century Gothic”, CenturyGothic, AppleGothic, sans-serif; 
+  font-family: 'Lato', sans-serif;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  word-spacing: 0.1em;
+  font-size: 18px;
 }
 
 /* Animation for SVGs */
@@ -922,7 +932,7 @@ form button {
       align-items: center;
     }
     .main-section .description-part {
-      padding: 30px 40px 0 0;
+      padding: 30px 0 30px 0;
     }
     .main-section .address-part,
     .main-section .description-part {
@@ -1048,8 +1058,9 @@ form button {
   /* about */
 .main-section .address-part p,
 .main-section .description-part p{
-font-size: 17px;
-  }
+      font-size: 16px;
+      max-width: 100%;
+    }
 .main-section .address-part,
 .main-section .description-part {
   max-width: 100%;
