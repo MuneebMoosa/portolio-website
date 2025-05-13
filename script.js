@@ -1,3 +1,16 @@
+// loader start
+let loader = document.getElementById('preloader');
+if (!sessionStorage.getItem('pageLoaded')) {
+window.addEventListener('load', () => {
+    setTimeout(() => {
+      loader.style.display='none';
+      sessionStorage.setItem('pageLoaded', 'true');
+    }, 7000);
+  });
+}else {
+  loader.style.display='none';
+}
+// loader ends
 // dark mode start
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitches = document.querySelectorAll('.theme-switch'); // Use querySelectorAll for multiple elements
