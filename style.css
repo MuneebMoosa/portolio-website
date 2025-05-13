@@ -5,9 +5,6 @@
   max-width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-body.no-scroll {
-  overflow: hidden;
-}
 .section{
   min-height: 100vh;
 }
@@ -39,6 +36,8 @@ body.no-scroll {
   z-index: 9999;
 }
 #loader {
+  height: 400px;
+  width: 400px;
   animation: fadeBlurZoom 7s ease-in-out forwards;
 }
 /* Keyframes for fade-in, blur, and zoom-out effect */

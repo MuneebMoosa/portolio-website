@@ -1,9 +1,11 @@
 // loader start
 let loader = document.getElementById('preloader');
-if (!sessionStorage.getItem('pageLoaded')) {
+if (!sessionStorage.getItem('pageLoaded')){
+  document.body.style.overflow = 'hidden';
 window.addEventListener('load', () => {
     setTimeout(() => {
       loader.style.display='none';
+      document.body.style.overflow = '';
       sessionStorage.setItem('pageLoaded', 'true');
     }, 7000);
   });
