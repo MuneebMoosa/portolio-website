@@ -5,9 +5,7 @@
   max-width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-.section{
-  min-height: 100vh;
-}
+
 :root{
   --main-color:  #f07e21;
   --primary-color: #fff;
@@ -1134,5 +1132,8 @@ form button {
 }
 .work-exp .exp-part p{
   font-size: 15px;
+}
+.contact-sec{
+  height: 750px;
 }
 }   
